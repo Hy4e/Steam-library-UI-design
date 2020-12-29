@@ -1,0 +1,321 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+
+}
+
+a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.384);
+}
+
+a:hover{
+   color:white;
+}
+body{
+    display: flex;
+    flex-direction: column;
+
+}
+
+body{
+    background-color: rgb(51, 58, 68);
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(45, 48, 53);
+    flex-grow: 0.1;
+   
+}
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-library{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: .7rem;
+}
+
+.nav-user{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+}
+.profile-name{
+    padding: 0.5rem;
+}
+.user-nav-icon{
+   margin-right: 25px;
+   background-color: rgba(84, 117, 187, 0.185);
+   padding: 0.3rem 0.7rem;
+}
+
+.user-nav-profile-metadata{
+    display: flex;
+    gap: .1rem;
+    align-items: center;
+    font-size: 0.7rem;
+    color: rgba(99, 150, 226, 0.815);
+    margin-right: 20px;
+    background-color: rgba(84, 117, 187, 0.185);
+
+   
+}
+.user-nav-profile-icon{
+    border-right: 2px solid rgba(84, 117, 187, 0.185);
+}
+
+.account-currency{
+    color: gray;
+    padding: .2rem;
+}
+
+.tab-container{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+.tab-container:last-child{
+    margin-left: 3rem;
+}
+
+.library{
+    display: flex;
+    flex-grow:1;
+}
+
+.search-bar{
+    background-color: rgb(45, 48, 53);
+    padding: 1rem;
+}
+
+.owned-games{
+    flex-basis: 25%;
+
+    background-color: rgb(55, 62, 75);
+    border-right: 2px solid black;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.games-dashboard{
+    flex-grow:3;
+    background-color: rgb(53, 58, 66);
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-button-container{
+    background-color: rgb(45, 48, 53);
+    padding: .2rem;
+
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.home-button{
+    padding: 0.4rem;
+    background-color: rgb(56, 58, 68);
+    color: white;
+    flex-basis: 90%;
+    align-self: center;
+}
+
+.collections-icon{
+   align-self: center;
+   padding: .4rem;
+   background-color: rgba(5, 5, 5, 0.068);
+   color: rgb(107, 107, 107);
+  font-size: 1.5rem;
+}
+
+.search-game-container{
+    display: flex;
+    justify-content: space-around;
+    gap: .5rem;
+    flex-wrap: wrap;
+    margin: .5rem;
+
+}
+
+.search-game-container div,input{
+    background-color: rgba(0, 0, 0, 0.164);
+}
+
+.search-game-element-1{
+    flex-basis: 100%;
+    display: flex;
+   
+}
+
+.search-game-element-2{
+    flex-basis: 100%;
+    display: flex;
+}
+
+.search-game-input{
+    flex-basis:80%;
+
+    color: white;
+    border: none;
+    border-radius: .1rem;
+    padding: .25rem;
+    outline: none;
+}
+
+.search-game-input:focus .search-game-container{
+    border: .1rem solid rgba(0, 0, 0, 0.657);
+    transition: 500ms;
+}
+
+.search-game-icon{
+    align-self: center;
+    text-align: center;
+
+    padding: .5rem;
+    flex-basis: 10%;
+}
+
+.setting-icon{
+    flex-basis: 10%;
+    align-self: center;
+  
+    padding: .5rem;
+}
+
+.nav-title{
+    flex-basis: 80%;
+   
+    padding: .5rem;
+
+}
+
+.playtime-icon{
+    flex-basis: 10%;
+    
+    padding: .5rem;
+
+}
+
+.launch-game-icon{
+    flex-basis: 10%;
+    
+    padding: .5rem;
+}
+
+.owned-games-container{
+  display: flex;
+  flex-direction: column;
+   
+}
+
+.number-of-games{
+
+    color: rgba(138, 138, 138, 0.637);
+}
+
+.game-container{
+    display: grid;
+    grid-template-columns: .1fr .1fr .8fr;
+    justify-content: space-around;
+    gap: .1rem;
+}
+
+.game-container > div{
+    align-self: center;
+
+}
+
+.hide-show-button, .friend-playing-icon{
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+}
+.friend-playing-icon{
+    color: rgb(92, 226, 114);
+    font-size: .5rem;
+}
+ .first-item{
+    background-color: rgba(83, 144, 223, 0.377);
+    padding: .25rem;
+}
+
+.game-cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1rem;
+    border-top: .1rem solid rgba(92, 92, 92, 0.514);
+    height: 45rem;
+    overflow-y: scroll;
+}   
+.game-cards-container img{
+    box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.212);
+    margin: 1rem;
+    height: 20rem;
+    width: 15rem;
+}
+
+.game-cards-container img:hover{
+    transform: perspective(15rem) rotateX(5deg);
+    transition: 500ms;
+   
+}
+
+footer{
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+footer > div{
+    align-self: center;
+    text-align: center;
+}
+
+.friends-button-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    color: rgba(255, 255, 255, 0.342);
+}
+
+.friends-button-container > div{
+    justify-self: center;
+}
+
+.add-game-button{
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
+    padding: .5rem;
+    color: white;
+}
+
+.gray-color{
+    color: gray;
+}
+
+.friends-button{
+    align-self: center;
+    font-size: 2rem;
+}
